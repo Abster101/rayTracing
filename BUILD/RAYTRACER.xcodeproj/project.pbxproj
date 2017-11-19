@@ -1,0 +1,1516 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		827C3E0521A447FD8CE8F553 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9383911180E54D02BB7ABE79 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				61D9F17E26D54128B37A66DF /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		F0ED143932C748A9925093BC /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 715A3F39AA9A43909FB3A84F /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				A691050A8144428A91F3AE34 /* CMake Rules */,
+			);
+			dependencies = (
+				719A456C682B439AB8B09577 /* PBXTargetDependency */,
+				2152D2E248AB438B8C2C634E /* PBXTargetDependency */,
+				5CF99F84063541D39CC347B3 /* PBXTargetDependency */,
+				EB112E72A4254D01A669AFCC /* PBXTargetDependency */,
+				F535F1C40628435EBF06B942 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0D06611F3F1740C19128F63A /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/png.h */ = {isa = PBXBuildFile; fileRef = 094EB2E828A041BCA0B7732A /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/png.h */; };
+		0ED5EB3EEFFA4853904D9141 /* /Users/aakanni/Documents/Graphics/rayTracing/shaders/vshader.glsl */ = {isa = PBXBuildFile; fileRef = A851C2C64C18491DAA2C2CDE /* /Users/aakanni/Documents/Graphics/rayTracing/shaders/vshader.glsl */; };
+		159BF7C7085F4A61A9FA5853 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/CheckError.h */ = {isa = PBXBuildFile; fileRef = 549EDA74D30D47A9B139E950 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/CheckError.h */; };
+		1721EC0EACF24F9C85A6312B /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/Object.h */ = {isa = PBXBuildFile; fileRef = D0895527BB944BE3A22D4EFA /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/Object.h */; };
+		1723A066CF5E42449626C50E /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/pngenc.cpp */ = {isa = PBXBuildFile; fileRef = 52551B24F5474F7D9632662B /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/pngenc.cpp */; };
+		1742D19CD1124431ACA63A06 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps/glad.c */ = {isa = PBXBuildFile; fileRef = 38B8C41A3D9744D1A2C4D297 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps/glad.c */; };
+		1FA8FBDD1A34485496D5A073 /* /Users/aakanni/Documents/Graphics/rayTracing/source/main.cpp */ = {isa = PBXBuildFile; fileRef = 761E8B2C8E4348969FD660E9 /* /Users/aakanni/Documents/Graphics/rayTracing/source/main.cpp */; };
+		20857832CFBA445DABB57213 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/monitor.c */ = {isa = PBXBuildFile; fileRef = A69B05F6D3864E80AB3CEB3A /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/monitor.c */; };
+		248624306DA547E79C5AE52B /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_time.c */ = {isa = PBXBuildFile; fileRef = 4B47BBD5D3DF4606B0E48AD0 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_time.c */; };
+		271924FF381840E48A1524E1 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 10B35A88C2C44ACDBC3E408E /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/CMakeLists.txt */; };
+		27349852F27149E9AFABE52C /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/Trackball.cpp */ = {isa = PBXBuildFile; fileRef = 11A30BAD7D134FE19548F34C /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/Trackball.cpp */; };
+		371766108C8A403F90270746 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 78DE2993229646428536B3EF /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/CMakeLists.txt */; };
+		38EA025DE5A14CD2844DF63D /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/vulkan.c */ = {isa = PBXBuildFile; fileRef = 8151D4635FF3437E86850536 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/vulkan.c */; };
+		3A4F693B586748488EFCA4DC /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = 7C6E89586E80400396B8F5C2 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include/GLFW/glfw3native.h */; };
+		45E157EADADC4AEBA48C880B /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/png.cpp */ = {isa = PBXBuildFile; fileRef = 9BC745BA96AF4806BB9A1DAA /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/png.cpp */; };
+		4640B8B63B2D4343AAF2C650 /* /Users/aakanni/Documents/Graphics/rayTracing/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 46359A236956433A8E7D20AE /* /Users/aakanni/Documents/Graphics/rayTracing/CMakeLists.txt */; };
+		4C7B6DBE900C482E8CD398D5 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/posix_tls.c */ = {isa = PBXBuildFile; fileRef = 6CC51CEBF55D4CCC9D8BB5E9 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/posix_tls.c */; };
+		5305DD17EB6545E8983D4CBC /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/SourcePath.cpp */ = {isa = PBXBuildFile; fileRef = 95671CE15BD74FE6BA78695F /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/SourcePath.cpp */; };
+		5DB059AE905E45718210B234 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/SourcePath.h */ = {isa = PBXBuildFile; fileRef = 08BD25243F764D80AA913A94 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/SourcePath.h */; };
+		69FC9A07AFE249988E39FA4A /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = 87ACD38CDA2D4D14BCBAADC3 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_platform.h */; };
+		6A03AD1D55A14537A03FB087 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zss.cpp */ = {isa = PBXBuildFile; fileRef = 5FD9FE1C28474D5A8ED997D7 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zss.cpp */; };
+		6A09394E80344DA8BDF41F32 /* /Users/aakanni/Documents/Graphics/rayTracing/shaders/fshader.glsl */ = {isa = PBXBuildFile; fileRef = 7D324A8A9CAE4F1FA7597E54 /* /Users/aakanni/Documents/Graphics/rayTracing/shaders/fshader.glsl */; };
+		6F011BDDF79D4A79AEB8B9E6 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = 36754E7E63954EBF8087E8DD /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_monitor.m */; };
+		7255C40CE89745D3BD3EE413 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/posix_tls.h */ = {isa = PBXBuildFile; fileRef = 7438757EB4E94C5B9837337D /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/posix_tls.h */; };
+		810E526AB3AF4E04B9C2AFFB /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/pngdec.h */ = {isa = PBXBuildFile; fileRef = 6CECAC7AFDA9426BAC8D57F8 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/pngdec.h */; };
+		8307EE852B574AA5A8A9A410 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/vec.h */ = {isa = PBXBuildFile; fileRef = 4FABA19C02524F88A1638709 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/vec.h */; };
+		85BF2796F10D479E9605546A /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = B41E780B32F84144BE36D188 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include/GLFW/glfw3.h */; };
+		86F414B14A914AA7A2086627 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/nsgl_context.h */ = {isa = PBXBuildFile; fileRef = 57BF8675566E4390862FBE6B /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/nsgl_context.h */; };
+		88128C37514446BC997153F3 /* /Users/aakanni/Documents/Graphics/rayTracing/BUILD/CMakeFiles/raytracer.dir/Info.plist */ = {isa = PBXBuildFile; fileRef = EEC4C2E1FDA74894B69DAC93 /* /Users/aakanni/Documents/Graphics/rayTracing/BUILD/CMakeFiles/raytracer.dir/Info.plist */; };
+		A176EFF90A544BB8BAB5E955 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_joystick.m */ = {isa = PBXBuildFile; fileRef = 6331A26C592245A29A758F56 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_joystick.m */; };
+		A73B376831B745868BA22858 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps/glad/glad.h */ = {isa = PBXBuildFile; fileRef = F4792CB4FD46496F8BDF0D69 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps/glad/glad.h */; };
+		A95B9D0D8B894BA8B0E44532 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/context.c */ = {isa = PBXBuildFile; fileRef = 4AA6CDE82C98459792593F84 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/context.c */; };
+		ABAD601CE0204A02BC547547 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = A55932240E8A4055B8074FEC /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/nsgl_context.m */; };
+		B4EE529CFAE44A4EB926825E /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zenc.h */ = {isa = PBXBuildFile; fileRef = C9E65D9F74ED46B6ADCA63F2 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zenc.h */; };
+		B6C2D25F0A9342DE93900D04 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/internal.h */ = {isa = PBXBuildFile; fileRef = BC07290839564565B392F514 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/internal.h */; };
+		B97BD7707B8A4740A7027D01 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zenc.cpp */ = {isa = PBXBuildFile; fileRef = 956D9F8F135948A8A17AAD86 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zenc.cpp */; };
+		BEA02B3ACB3B49C1ACAA8A69 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/window.c */ = {isa = PBXBuildFile; fileRef = E1DC5E09B03A48CAAF71A00B /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/window.c */; };
+		BF714B597F1D4D388E128224 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/Trackball.h */ = {isa = PBXBuildFile; fileRef = 4418B6E9237F46E0BD680E93 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/Trackball.h */; };
+		C35EE103C2944A2CADBF5499 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/common.h */ = {isa = PBXBuildFile; fileRef = F3DAB0E77DAE4D74880E867D /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/common.h */; };
+		C4F19EB2481744D382DC11B8 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zss.h */ = {isa = PBXBuildFile; fileRef = 1204179878874C1AB5BEF460 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zss.h */; };
+		C9B0ED510F344635B1CCC80F /* /Users/aakanni/Documents/Graphics/rayTracing/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 403ABD7D60B84FB9AB737E34 /* /Users/aakanni/Documents/Graphics/rayTracing/CMakeLists.txt */; };
+		CCE8F790A446453ABE0536AA /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/ObjMesh.cpp */ = {isa = PBXBuildFile; fileRef = 92F402B09FCC459E848B4ED5 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/ObjMesh.cpp */; };
+		CEEF5EC83E634750BC5620CB /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/init.c */ = {isa = PBXBuildFile; fileRef = 33B22151B03143AD8A383660 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/init.c */; };
+		CFB2EC1C2D3D4E409748C314 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/pngenc.h */ = {isa = PBXBuildFile; fileRef = 8EB83B7B1895451790C64CB4 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/pngenc.h */; };
+		CFEBB0E063D64D148FC20E34 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/Object.cpp */ = {isa = PBXBuildFile; fileRef = A11DD4B9834E41679C72A91F /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/Object.cpp */; };
+		D38DF45073354AB19374DAD1 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/ObjMesh.h */ = {isa = PBXBuildFile; fileRef = 6AEF4031D3464D1BB4DBB220 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/ObjMesh.h */; };
+		D751D546B5474DA1B1E4B182 /* /Users/aakanni/Documents/Graphics/rayTracing/BUILD/glfw-3.2/src/glfw_config.h */ = {isa = PBXBuildFile; fileRef = DDA2D0856A48494782453755 /* /Users/aakanni/Documents/Graphics/rayTracing/BUILD/glfw-3.2/src/glfw_config.h */; };
+		D97EF82C6F0944979210646E /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/mat.h */ = {isa = PBXBuildFile; fileRef = 6D1218A639ED49BE939D7B8F /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/mat.h */; };
+		DAD249ED5B5C4C07A2D3F505 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/input.c */ = {isa = PBXBuildFile; fileRef = 8E15C62DE9BE4F78AB7F136C /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/input.c */; };
+		E0151108476148C8BE6ABF6D /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zdec.h */ = {isa = PBXBuildFile; fileRef = 84CE197E5100433BA4572B8E /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zdec.h */; };
+		E57DE892536D4379B87D83C3 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = 22E37D59665A47A29B2C3368 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_window.m */; };
+		E8C6C3A0456D409CABB1D710 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/pngdec.cpp */ = {isa = PBXBuildFile; fileRef = CCD2E8D306994B5487C080D2 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/pngdec.cpp */; };
+		E96D1F59A0F74A6491073A63 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_joystick.h */ = {isa = PBXBuildFile; fileRef = 877098DFF06C471BA2F57D61 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_joystick.h */; };
+		EE8BAF33D728486C8458514C /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zdec.cpp */ = {isa = PBXBuildFile; fileRef = DAE7936EAB014386A8AB0420 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zdec.cpp */; };
+		FC0FCD3349E24C8DB3867C23 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = 5D41DF584F574A0E89721D63 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_init.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		24986591554E4AB9BBA28D08 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		435190B4B4E54F7498E09AD1 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		81F6BE2B5AE8451EA4EC792B /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		A9D1BE1D62764A75819017AA /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		463B2F4B48B6416C9B7BFA0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA86C3BA71F54E9AB78DC44D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 827C3E0521A447FD8CE8F553;
+			remoteInfo = ZERO_CHECK;
+		};
+		47B3E90B082C46FFAE4CC7C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA86C3BA71F54E9AB78DC44D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D87562FBB84B45A9BADA3112;
+			remoteInfo = raytracer;
+		};
+		611921AB83D84DE9A513858F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA86C3BA71F54E9AB78DC44D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9899BBAF7724D6CA42A492F;
+			remoteInfo = pngdecode;
+		};
+		6682CD7172264F43B089571B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA86C3BA71F54E9AB78DC44D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9899BBAF7724D6CA42A492F;
+			remoteInfo = pngdecode;
+		};
+		749F6B15A72D4927A8DFD6FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA86C3BA71F54E9AB78DC44D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70E994074C414AE38614B0B8;
+			remoteInfo = glfw;
+		};
+		7F8510B70EEB4843A8D20CBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA86C3BA71F54E9AB78DC44D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E212E38D7B743FBB4B9A3B5;
+			remoteInfo = glad;
+		};
+		83BCA8FC15DD4B5891F12B42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA86C3BA71F54E9AB78DC44D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E212E38D7B743FBB4B9A3B5;
+			remoteInfo = glad;
+		};
+		AE0804A2A1C843E79D2302DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA86C3BA71F54E9AB78DC44D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70E994074C414AE38614B0B8;
+			remoteInfo = glfw;
+		};
+		C897F222EFBB434E9B046F3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA86C3BA71F54E9AB78DC44D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 827C3E0521A447FD8CE8F553;
+			remoteInfo = ZERO_CHECK;
+		};
+		D049DB3BB5394A19AF4B8C47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA86C3BA71F54E9AB78DC44D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70E994074C414AE38614B0B8;
+			remoteInfo = glfw;
+		};
+		DB38D773BB614129A56299B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA86C3BA71F54E9AB78DC44D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E212E38D7B743FBB4B9A3B5;
+			remoteInfo = glad;
+		};
+		DDE0C90E95D346A79B5F4ECA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA86C3BA71F54E9AB78DC44D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 827C3E0521A447FD8CE8F553;
+			remoteInfo = ZERO_CHECK;
+		};
+		E20C9517B1B8492693ACAEC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA86C3BA71F54E9AB78DC44D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 827C3E0521A447FD8CE8F553;
+			remoteInfo = ZERO_CHECK;
+		};
+		E5D7D9BB19C546FE81D2EDA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA86C3BA71F54E9AB78DC44D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 827C3E0521A447FD8CE8F553;
+			remoteInfo = ZERO_CHECK;
+		};
+		F82131024A20447999DBB4D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA86C3BA71F54E9AB78DC44D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70E994074C414AE38614B0B8;
+			remoteInfo = glfw;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08BD25243F764D80AA913A94 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/SourcePath.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = SourcePath.h; path = source/common/SourcePath.h; sourceTree = SOURCE_ROOT; };
+		094EB2E828A041BCA0B7732A /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/png.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = png.h; path = pngdecode/png.h; sourceTree = SOURCE_ROOT; };
+		10B35A88C2C44ACDBC3E408E /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = pngdecode/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		11A30BAD7D134FE19548F34C /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/Trackball.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Trackball.cpp; path = source/common/Trackball.cpp; sourceTree = SOURCE_ROOT; };
+		1204179878874C1AB5BEF460 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zss.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zss.h; path = pngdecode/zss.h; sourceTree = SOURCE_ROOT; };
+		22E37D59665A47A29B2C3368 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = "glfw-3.2/src/cocoa_window.m"; sourceTree = SOURCE_ROOT; };
+		33B22151B03143AD8A383660 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = "glfw-3.2/src/init.c"; sourceTree = SOURCE_ROOT; };
+		36754E7E63954EBF8087E8DD /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = "glfw-3.2/src/cocoa_monitor.m"; sourceTree = SOURCE_ROOT; };
+		38B8C41A3D9744D1A2C4D297 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps/glad.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glad.c; path = "glfw-3.2/deps/glad.c"; sourceTree = SOURCE_ROOT; };
+		403ABD7D60B84FB9AB737E34 /* /Users/aakanni/Documents/Graphics/rayTracing/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		4418B6E9237F46E0BD680E93 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/Trackball.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Trackball.h; path = source/common/Trackball.h; sourceTree = SOURCE_ROOT; };
+		46359A236956433A8E7D20AE /* /Users/aakanni/Documents/Graphics/rayTracing/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		4AA6CDE82C98459792593F84 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = "glfw-3.2/src/context.c"; sourceTree = SOURCE_ROOT; };
+		4B47BBD5D3DF4606B0E48AD0 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cocoa_time.c; path = "glfw-3.2/src/cocoa_time.c"; sourceTree = SOURCE_ROOT; };
+		4FABA19C02524F88A1638709 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/vec.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = vec.h; path = source/common/vec.h; sourceTree = SOURCE_ROOT; };
+		52551B24F5474F7D9632662B /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/pngenc.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = pngenc.cpp; path = pngdecode/pngenc.cpp; sourceTree = SOURCE_ROOT; };
+		52BAECCB489F4699A3367F32 /* pngdecode */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libpngdecode.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		549EDA74D30D47A9B139E950 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/CheckError.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CheckError.h; path = source/common/CheckError.h; sourceTree = SOURCE_ROOT; };
+		57BF8675566E4390862FBE6B /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = "glfw-3.2/src/nsgl_context.h"; sourceTree = SOURCE_ROOT; };
+		5D41DF584F574A0E89721D63 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = "glfw-3.2/src/cocoa_init.m"; sourceTree = SOURCE_ROOT; };
+		5FD9FE1C28474D5A8ED997D7 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zss.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = zss.cpp; path = pngdecode/zss.cpp; sourceTree = SOURCE_ROOT; };
+		6331A26C592245A29A758F56 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_joystick.m; path = "glfw-3.2/src/cocoa_joystick.m"; sourceTree = SOURCE_ROOT; };
+		6AEF4031D3464D1BB4DBB220 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/ObjMesh.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ObjMesh.h; path = source/common/ObjMesh.h; sourceTree = SOURCE_ROOT; };
+		6CC51CEBF55D4CCC9D8BB5E9 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/posix_tls.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_tls.c; path = "glfw-3.2/src/posix_tls.c"; sourceTree = SOURCE_ROOT; };
+		6CECAC7AFDA9426BAC8D57F8 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/pngdec.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pngdec.h; path = pngdecode/pngdec.h; sourceTree = SOURCE_ROOT; };
+		6D1218A639ED49BE939D7B8F /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/mat.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mat.h; path = source/common/mat.h; sourceTree = SOURCE_ROOT; };
+		7438757EB4E94C5B9837337D /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/posix_tls.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_tls.h; path = "glfw-3.2/src/posix_tls.h"; sourceTree = SOURCE_ROOT; };
+		761E8B2C8E4348969FD660E9 /* /Users/aakanni/Documents/Graphics/rayTracing/source/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = source/main.cpp; sourceTree = SOURCE_ROOT; };
+		78DE2993229646428536B3EF /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = "glfw-3.2/src/CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+		7C6E89586E80400396B8F5C2 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = "glfw-3.2/include/GLFW/glfw3native.h"; sourceTree = SOURCE_ROOT; };
+		7D324A8A9CAE4F1FA7597E54 /* /Users/aakanni/Documents/Graphics/rayTracing/shaders/fshader.glsl */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = fshader.glsl; path = shaders/fshader.glsl; sourceTree = SOURCE_ROOT; };
+		8151D4635FF3437E86850536 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/vulkan.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vulkan.c; path = "glfw-3.2/src/vulkan.c"; sourceTree = SOURCE_ROOT; };
+		84CE197E5100433BA4572B8E /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zdec.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zdec.h; path = pngdecode/zdec.h; sourceTree = SOURCE_ROOT; };
+		877098DFF06C471BA2F57D61 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_joystick.h; path = "glfw-3.2/src/cocoa_joystick.h"; sourceTree = SOURCE_ROOT; };
+		87ACD38CDA2D4D14BCBAADC3 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = "glfw-3.2/src/cocoa_platform.h"; sourceTree = SOURCE_ROOT; };
+		8E15C62DE9BE4F78AB7F136C /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = "glfw-3.2/src/input.c"; sourceTree = SOURCE_ROOT; };
+		8EB83B7B1895451790C64CB4 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/pngenc.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pngenc.h; path = pngdecode/pngenc.h; sourceTree = SOURCE_ROOT; };
+		92F402B09FCC459E848B4ED5 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/ObjMesh.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ObjMesh.cpp; path = source/common/ObjMesh.cpp; sourceTree = SOURCE_ROOT; };
+		942FA3697FF84D4D809567D1 /* /Users/aakanni/Documents/Graphics/rayTracing/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		9490844FA9874951BA1F39C3 /* glad */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglad.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		95671CE15BD74FE6BA78695F /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/SourcePath.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = SourcePath.cpp; path = source/common/SourcePath.cpp; sourceTree = SOURCE_ROOT; };
+		956D9F8F135948A8A17AAD86 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zenc.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = zenc.cpp; path = pngdecode/zenc.cpp; sourceTree = SOURCE_ROOT; };
+		9BC745BA96AF4806BB9A1DAA /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/png.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = png.cpp; path = pngdecode/png.cpp; sourceTree = SOURCE_ROOT; };
+		A11DD4B9834E41679C72A91F /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/Object.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Object.cpp; path = source/common/Object.cpp; sourceTree = SOURCE_ROOT; };
+		A55932240E8A4055B8074FEC /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = "glfw-3.2/src/nsgl_context.m"; sourceTree = SOURCE_ROOT; };
+		A69B05F6D3864E80AB3CEB3A /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = "glfw-3.2/src/monitor.c"; sourceTree = SOURCE_ROOT; };
+		A851C2C64C18491DAA2C2CDE /* /Users/aakanni/Documents/Graphics/rayTracing/shaders/vshader.glsl */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = vshader.glsl; path = shaders/vshader.glsl; sourceTree = SOURCE_ROOT; };
+		ABBC600ECB6F43BE9A33748A /* /Users/aakanni/Documents/Graphics/rayTracing/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		B41E780B32F84144BE36D188 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = "glfw-3.2/include/GLFW/glfw3.h"; sourceTree = SOURCE_ROOT; };
+		B545BE35A9BA40BBABB973FB /* raytracer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = raytracer; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC07290839564565B392F514 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = "glfw-3.2/src/internal.h"; sourceTree = SOURCE_ROOT; };
+		C9E65D9F74ED46B6ADCA63F2 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zenc.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zenc.h; path = pngdecode/zenc.h; sourceTree = SOURCE_ROOT; };
+		CCD2E8D306994B5487C080D2 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/pngdec.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = pngdec.cpp; path = pngdecode/pngdec.cpp; sourceTree = SOURCE_ROOT; };
+		D0895527BB944BE3A22D4EFA /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/Object.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Object.h; path = source/common/Object.h; sourceTree = SOURCE_ROOT; };
+		DAE7936EAB014386A8AB0420 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zdec.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = zdec.cpp; path = pngdecode/zdec.cpp; sourceTree = SOURCE_ROOT; };
+		DDA2D0856A48494782453755 /* /Users/aakanni/Documents/Graphics/rayTracing/BUILD/glfw-3.2/src/glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = "BUILD/glfw-3.2/src/glfw_config.h"; sourceTree = SOURCE_ROOT; };
+		E1DC5E09B03A48CAAF71A00B /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = "glfw-3.2/src/window.c"; sourceTree = SOURCE_ROOT; };
+		ECC33AD91F22414291DCEBDD /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEC4C2E1FDA74894B69DAC93 /* /Users/aakanni/Documents/Graphics/rayTracing/BUILD/CMakeFiles/raytracer.dir/Info.plist */ = {isa = PBXFileReference; explicitFileType = sourcecode.text.plist; fileEncoding = 4; name = Info.plist; path = BUILD/CMakeFiles/raytracer.dir/Info.plist; sourceTree = SOURCE_ROOT; };
+		F3DAB0E77DAE4D74880E867D /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/common.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = common.h; path = source/common/common.h; sourceTree = SOURCE_ROOT; };
+		F4792CB4FD46496F8BDF0D69 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps/glad/glad.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glad.h; path = "glfw-3.2/deps/glad/glad.h"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		10262A6D618940938818D37C /* glfw */ = {
+			isa = PBXGroup;
+			children = (
+				ECB57BF09D5D4ACDA51AA455 /* Source Files */,
+				AB418AC520BC41FFA6163F37 /* Header Files */,
+				78DE2993229646428536B3EF /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/CMakeLists.txt */,
+			);
+			name = glfw;
+			sourceTree = "<group>";
+		};
+		1E102773509D476A9D1A1B3B /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				38B8C41A3D9744D1A2C4D297 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps/glad.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		258BD56DC0614DEFAF0886D9 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				549EDA74D30D47A9B139E950 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/CheckError.h */,
+				6AEF4031D3464D1BB4DBB220 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/ObjMesh.h */,
+				D0895527BB944BE3A22D4EFA /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/Object.h */,
+				08BD25243F764D80AA913A94 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/SourcePath.h */,
+				4418B6E9237F46E0BD680E93 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/Trackball.h */,
+				F3DAB0E77DAE4D74880E867D /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/common.h */,
+				6D1218A639ED49BE939D7B8F /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/mat.h */,
+				4FABA19C02524F88A1638709 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/vec.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		2BD46FF0FAB749DCAE20A54F /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				094EB2E828A041BCA0B7732A /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/png.h */,
+				6CECAC7AFDA9426BAC8D57F8 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/pngdec.h */,
+				8EB83B7B1895451790C64CB4 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/pngenc.h */,
+				84CE197E5100433BA4572B8E /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zdec.h */,
+				C9E65D9F74ED46B6ADCA63F2 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zenc.h */,
+				1204179878874C1AB5BEF460 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zss.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		3449DEA89A9241EA88090FE2 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		7CEB063749E442F9B68A29AA /* pngdecode */ = {
+			isa = PBXGroup;
+			children = (
+				7E4B78106AA54296A2003954 /* Source Files */,
+				2BD46FF0FAB749DCAE20A54F /* Header Files */,
+				10B35A88C2C44ACDBC3E408E /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/CMakeLists.txt */,
+			);
+			name = pngdecode;
+			sourceTree = "<group>";
+		};
+		7E4B78106AA54296A2003954 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BC745BA96AF4806BB9A1DAA /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/png.cpp */,
+				CCD2E8D306994B5487C080D2 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/pngdec.cpp */,
+				52551B24F5474F7D9632662B /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/pngenc.cpp */,
+				DAE7936EAB014386A8AB0420 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zdec.cpp */,
+				956D9F8F135948A8A17AAD86 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zenc.cpp */,
+				5FD9FE1C28474D5A8ED997D7 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zss.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		7EEF01E5351744ACA0D28B1A /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				C08B73DFDE0D439C93E61D49 /* CMake Rules */,
+				942FA3697FF84D4D809567D1 /* /Users/aakanni/Documents/Graphics/rayTracing/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		8EB57B46BFC94751B39B6B12 /* glad */ = {
+			isa = PBXGroup;
+			children = (
+				FD96E5F8A3744644B9185E2C /* Header Files */,
+				1E102773509D476A9D1A1B3B /* Source Files */,
+				46359A236956433A8E7D20AE /* /Users/aakanni/Documents/Graphics/rayTracing/CMakeLists.txt */,
+			);
+			name = glad;
+			sourceTree = "<group>";
+		};
+		AB418AC520BC41FFA6163F37 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				DDA2D0856A48494782453755 /* /Users/aakanni/Documents/Graphics/rayTracing/BUILD/glfw-3.2/src/glfw_config.h */,
+				B41E780B32F84144BE36D188 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include/GLFW/glfw3.h */,
+				7C6E89586E80400396B8F5C2 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include/GLFW/glfw3native.h */,
+				877098DFF06C471BA2F57D61 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_joystick.h */,
+				87ACD38CDA2D4D14BCBAADC3 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_platform.h */,
+				BC07290839564565B392F514 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/internal.h */,
+				57BF8675566E4390862FBE6B /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/nsgl_context.h */,
+				7438757EB4E94C5B9837337D /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/posix_tls.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		AFA319A8E9DF43C994F20391 /* GLFW3 */ = {
+			isa = PBXGroup;
+			children = (
+				10262A6D618940938818D37C /* glfw */,
+			);
+			name = GLFW3;
+			sourceTree = "<group>";
+		};
+		B48948930D2F4B55BCEB3C01 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EEC4C2E1FDA74894B69DAC93 /* /Users/aakanni/Documents/Graphics/rayTracing/BUILD/CMakeFiles/raytracer.dir/Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BFB5C0B057EF4A8F9B1EA02D = {
+			isa = PBXGroup;
+			children = (
+				EA40E024FD874DE990388E40 /* raytracer */,
+				8EB57B46BFC94751B39B6B12 /* glad */,
+				7EEF01E5351744ACA0D28B1A /* ALL_BUILD */,
+				C0B2FF67A7C14E55B4CDA275 /* ZERO_CHECK */,
+				AFA319A8E9DF43C994F20391 /* GLFW3 */,
+				7CEB063749E442F9B68A29AA /* pngdecode */,
+				DC5ABC2BC4B945A4AC512DA2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C08B73DFDE0D439C93E61D49 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		C0B2FF67A7C14E55B4CDA275 /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				3449DEA89A9241EA88090FE2 /* CMake Rules */,
+				ABBC600ECB6F43BE9A33748A /* /Users/aakanni/Documents/Graphics/rayTracing/CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		DC5ABC2BC4B945A4AC512DA2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9490844FA9874951BA1F39C3 /* glad */,
+				B545BE35A9BA40BBABB973FB /* raytracer */,
+				ECC33AD91F22414291DCEBDD /* glfw */,
+				52BAECCB489F4699A3367F32 /* pngdecode */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA40E024FD874DE990388E40 /* raytracer */ = {
+			isa = PBXGroup;
+			children = (
+				F60FDD9190414DDEBB5688E1 /* Source Files */,
+				258BD56DC0614DEFAF0886D9 /* Header Files */,
+				B48948930D2F4B55BCEB3C01 /* Resources */,
+				403ABD7D60B84FB9AB737E34 /* /Users/aakanni/Documents/Graphics/rayTracing/CMakeLists.txt */,
+				7D324A8A9CAE4F1FA7597E54 /* /Users/aakanni/Documents/Graphics/rayTracing/shaders/fshader.glsl */,
+				A851C2C64C18491DAA2C2CDE /* /Users/aakanni/Documents/Graphics/rayTracing/shaders/vshader.glsl */,
+			);
+			name = raytracer;
+			sourceTree = "<group>";
+		};
+		ECB57BF09D5D4ACDA51AA455 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				5D41DF584F574A0E89721D63 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_init.m */,
+				6331A26C592245A29A758F56 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_joystick.m */,
+				36754E7E63954EBF8087E8DD /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_monitor.m */,
+				4B47BBD5D3DF4606B0E48AD0 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_time.c */,
+				22E37D59665A47A29B2C3368 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_window.m */,
+				4AA6CDE82C98459792593F84 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/context.c */,
+				33B22151B03143AD8A383660 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/init.c */,
+				8E15C62DE9BE4F78AB7F136C /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/input.c */,
+				A69B05F6D3864E80AB3CEB3A /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/monitor.c */,
+				A55932240E8A4055B8074FEC /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/nsgl_context.m */,
+				6CC51CEBF55D4CCC9D8BB5E9 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/posix_tls.c */,
+				8151D4635FF3437E86850536 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/vulkan.c */,
+				E1DC5E09B03A48CAAF71A00B /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/window.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		F60FDD9190414DDEBB5688E1 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				92F402B09FCC459E848B4ED5 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/ObjMesh.cpp */,
+				A11DD4B9834E41679C72A91F /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/Object.cpp */,
+				95671CE15BD74FE6BA78695F /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/SourcePath.cpp */,
+				11A30BAD7D134FE19548F34C /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/Trackball.cpp */,
+				761E8B2C8E4348969FD660E9 /* /Users/aakanni/Documents/Graphics/rayTracing/source/main.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		FD96E5F8A3744644B9185E2C /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4792CB4FD46496F8BDF0D69 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps/glad/glad.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E212E38D7B743FBB4B9A3B5 /* glad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE95A216B9C44054A730E1BD /* Build configuration list for PBXNativeTarget "glad" */;
+			buildPhases = (
+				1159B04BB0B64FD9A154B3A1 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				73463C40ABCC49B7A8D4D0F8 /* PBXTargetDependency */,
+				C9675650131547DDB8EF4DC2 /* PBXTargetDependency */,
+			);
+			name = glad;
+			productName = glad;
+			productReference = 9490844FA9874951BA1F39C3 /* glad */;
+			productType = "com.apple.product-type.library.static";
+		};
+		70E994074C414AE38614B0B8 /* glfw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15414F8145FC4CE59742C771 /* Build configuration list for PBXNativeTarget "glfw" */;
+			buildPhases = (
+				8F9D2A847B4C4D318CFAB039 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACB4B96507C949EA9706EC60 /* PBXTargetDependency */,
+			);
+			name = glfw;
+			productName = glfw;
+			productReference = ECC33AD91F22414291DCEBDD /* glfw */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D87562FBB84B45A9BADA3112 /* raytracer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 115A8331B0274E6D9C437919 /* Build configuration list for PBXNativeTarget "raytracer" */;
+			buildPhases = (
+				CD4C1B1F34794748B5C8F5B7 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				866C243EBABF4219B121ED9D /* PBXTargetDependency */,
+				2C68593F879C41EE8323847F /* PBXTargetDependency */,
+				D2C697E86DD4490F8DBC7BD4 /* PBXTargetDependency */,
+				D865912DEE1E412BAD639FDD /* PBXTargetDependency */,
+			);
+			name = raytracer;
+			productName = raytracer;
+			productReference = B545BE35A9BA40BBABB973FB /* raytracer */;
+			productType = "com.apple.product-type.application";
+		};
+		D9899BBAF7724D6CA42A492F /* pngdecode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEDCA5AE6EDF4299BA6D597A /* Build configuration list for PBXNativeTarget "pngdecode" */;
+			buildPhases = (
+				7A33B98A9EF0431A87CCEB27 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79AE654D729A49448EEA48FC /* PBXTargetDependency */,
+				35C12F3752AF429CB4AB7D33 /* PBXTargetDependency */,
+				A2525D4F6D874A67A906AF36 /* PBXTargetDependency */,
+			);
+			name = pngdecode;
+			productName = pngdecode;
+			productReference = 52BAECCB489F4699A3367F32 /* pngdecode */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA86C3BA71F54E9AB78DC44D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0910;
+			};
+			buildConfigurationList = F7E9C5676A4E47C1920BA324 /* Build configuration list for PBXProject "RAYTRACER" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				435190B4B4E54F7498E09AD1 /* Debug */,
+				A9D1BE1D62764A75819017AA /* Release */,
+				81F6BE2B5AE8451EA4EC792B /* MinSizeRel */,
+				24986591554E4AB9BBA28D08 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = BFB5C0B057EF4A8F9B1EA02D;
+			projectDirPath = ../;
+			projectRoot = "";
+			targets = (
+				F0ED143932C748A9925093BC /* ALL_BUILD */,
+				827C3E0521A447FD8CE8F553 /* ZERO_CHECK */,
+				3E212E38D7B743FBB4B9A3B5 /* glad */,
+				D87562FBB84B45A9BADA3112 /* raytracer */,
+				70E994074C414AE38614B0B8 /* glfw */,
+				D9899BBAF7724D6CA42A492F /* pngdecode */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B65462847F746B3B4D7BAF9 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		61D9F17E26D54128B37A66DF /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			outputPaths = (
+/Users/aakanni/Documents/Graphics/rayTracing/BUILD/CMakeFiles/ZERO_CHECK			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/aakanni/Documents/Graphics/rayTracing/BUILD -f /Users/aakanni/Documents/Graphics/rayTracing/BUILD/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		A691050A8144428A91F3AE34 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			outputPaths = (
+/Users/aakanni/Documents/Graphics/rayTracing/BUILD/CMakeFiles/ALL_BUILD			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/aakanni/Documents/Graphics/rayTracing/BUILD -f /Users/aakanni/Documents/Graphics/rayTracing/BUILD/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		C4007F49A2344DF8B5C9972D = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1159B04BB0B64FD9A154B3A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1742D19CD1124431ACA63A06 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps/glad.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A33B98A9EF0431A87CCEB27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45E157EADADC4AEBA48C880B /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/png.cpp */,
+				E8C6C3A0456D409CABB1D710 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/pngdec.cpp */,
+				1723A066CF5E42449626C50E /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/pngenc.cpp */,
+				EE8BAF33D728486C8458514C /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zdec.cpp */,
+				B97BD7707B8A4740A7027D01 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zenc.cpp */,
+				6A03AD1D55A14537A03FB087 /* /Users/aakanni/Documents/Graphics/rayTracing/pngdecode/zss.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F9D2A847B4C4D318CFAB039 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC0FCD3349E24C8DB3867C23 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_init.m */,
+				A176EFF90A544BB8BAB5E955 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_joystick.m */,
+				6F011BDDF79D4A79AEB8B9E6 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_monitor.m */,
+				248624306DA547E79C5AE52B /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_time.c */,
+				E57DE892536D4379B87D83C3 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/cocoa_window.m */,
+				A95B9D0D8B894BA8B0E44532 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/context.c */,
+				CEEF5EC83E634750BC5620CB /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/init.c */,
+				DAD249ED5B5C4C07A2D3F505 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/input.c */,
+				20857832CFBA445DABB57213 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/monitor.c */,
+				ABAD601CE0204A02BC547547 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/nsgl_context.m */,
+				4C7B6DBE900C482E8CD398D5 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/posix_tls.c */,
+				38EA025DE5A14CD2844DF63D /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/vulkan.c */,
+				BEA02B3ACB3B49C1ACAA8A69 /* /Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src/window.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD4C1B1F34794748B5C8F5B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCE8F790A446453ABE0536AA /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/ObjMesh.cpp */,
+				CFEBB0E063D64D148FC20E34 /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/Object.cpp */,
+				5305DD17EB6545E8983D4CBC /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/SourcePath.cpp */,
+				27349852F27149E9AFABE52C /* /Users/aakanni/Documents/Graphics/rayTracing/source/common/Trackball.cpp */,
+				1FA8FBDD1A34485496D5A073 /* /Users/aakanni/Documents/Graphics/rayTracing/source/main.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2152D2E248AB438B8C2C634E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E212E38D7B743FBB4B9A3B5 /* glad */;
+			targetProxy = DB38D773BB614129A56299B4 /* PBXContainerItemProxy */;
+		};
+		2C68593F879C41EE8323847F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9899BBAF7724D6CA42A492F /* pngdecode */;
+			targetProxy = 6682CD7172264F43B089571B /* PBXContainerItemProxy */;
+		};
+		35C12F3752AF429CB4AB7D33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 827C3E0521A447FD8CE8F553 /* ZERO_CHECK */;
+			targetProxy = DDE0C90E95D346A79B5F4ECA /* PBXContainerItemProxy */;
+		};
+		5CF99F84063541D39CC347B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9899BBAF7724D6CA42A492F /* pngdecode */;
+			targetProxy = 611921AB83D84DE9A513858F /* PBXContainerItemProxy */;
+		};
+		719A456C682B439AB8B09577 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D87562FBB84B45A9BADA3112 /* raytracer */;
+			targetProxy = 47B3E90B082C46FFAE4CC7C5 /* PBXContainerItemProxy */;
+		};
+		73463C40ABCC49B7A8D4D0F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 827C3E0521A447FD8CE8F553 /* ZERO_CHECK */;
+			targetProxy = E20C9517B1B8492693ACAEC5 /* PBXContainerItemProxy */;
+		};
+		79AE654D729A49448EEA48FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E212E38D7B743FBB4B9A3B5 /* glad */;
+			targetProxy = 7F8510B70EEB4843A8D20CBB /* PBXContainerItemProxy */;
+		};
+		866C243EBABF4219B121ED9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E212E38D7B743FBB4B9A3B5 /* glad */;
+			targetProxy = 83BCA8FC15DD4B5891F12B42 /* PBXContainerItemProxy */;
+		};
+		A2525D4F6D874A67A906AF36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70E994074C414AE38614B0B8 /* glfw */;
+			targetProxy = 749F6B15A72D4927A8DFD6FD /* PBXContainerItemProxy */;
+		};
+		ACB4B96507C949EA9706EC60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 827C3E0521A447FD8CE8F553 /* ZERO_CHECK */;
+			targetProxy = C897F222EFBB434E9B046F3C /* PBXContainerItemProxy */;
+		};
+		C9675650131547DDB8EF4DC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70E994074C414AE38614B0B8 /* glfw */;
+			targetProxy = F82131024A20447999DBB4D9 /* PBXContainerItemProxy */;
+		};
+		D2C697E86DD4490F8DBC7BD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 827C3E0521A447FD8CE8F553 /* ZERO_CHECK */;
+			targetProxy = E5D7D9BB19C546FE81D2EDA9 /* PBXContainerItemProxy */;
+		};
+		D865912DEE1E412BAD639FDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70E994074C414AE38614B0B8 /* glfw */;
+			targetProxy = AE0804A2A1C843E79D2302DC /* PBXContainerItemProxy */;
+		};
+		EB112E72A4254D01A669AFCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 827C3E0521A447FD8CE8F553 /* ZERO_CHECK */;
+			targetProxy = 463B2F4B48B6416C9B7BFA0D /* PBXContainerItemProxy */;
+		};
+		F535F1C40628435EBF06B942 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70E994074C414AE38614B0B8 /* glfw */;
+			targetProxy = D049DB3BB5394A19AF4B8C47 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0B0C5E5ACCE84109A57637AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include","/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src","/Users/aakanni/Documents/Graphics/rayTracing/BUILD/glfw-3.2/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -fPIC -Wall  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/aakanni/Documents/Graphics/rayTracing/BUILD/glfw-3.2/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		0F7447FF7BF14169AA3D9AFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps",/Users/aakanni/Documents/Graphics/rayTracing/pngdecode,/Users/aakanni/Documents/Graphics/rayTracing/source/common,/Users/aakanni/Documents/Graphics/rayTracing/shaders,"/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glad;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		1824DE40A39648A48FECB34E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps","/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = pngdecode;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD/pngdecode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		1ABDC8B8D6F54E97A3CC101A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD/build;
+			};
+			name = Release;
+		};
+		1AFEBCB2609A499F85E8F345 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps",/Users/aakanni/Documents/Graphics/rayTracing/pngdecode,/Users/aakanni/Documents/Graphics/rayTracing/source/common,/Users/aakanni/Documents/Graphics/rayTracing/shaders,"/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glad;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		2AEF321A2DB3472BB55B3921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps",/Users/aakanni/Documents/Graphics/rayTracing/pngdecode,/Users/aakanni/Documents/Graphics/rayTracing/source/common,/Users/aakanni/Documents/Graphics/rayTracing/shaders,"/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include");
+				INFOPLIST_FILE = /Users/aakanni/Documents/Graphics/rayTracing/BUILD/CMakeFiles/raytracer.dir/Info.plist;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/aakanni/Documents/Graphics/rayTracing/BUILD/glfw-3.2/src/Release/libglfw3.a /Users/aakanni/Documents/Graphics/rayTracing/BUILD/Release/libglad.a /Users/aakanni/Documents/Graphics/rayTracing/BUILD/pngdecode/Release/libpngdecode.a /Users/aakanni/Documents/Graphics/rayTracing/BUILD/Release/libglad.a /Users/aakanni/Documents/Graphics/rayTracing/BUILD/glfw-3.2/src/Release/libglfw3.a -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = raytracer;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		2BBD95336A824A8D814746FC /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps",/Users/aakanni/Documents/Graphics/rayTracing/pngdecode,/Users/aakanni/Documents/Graphics/rayTracing/source/common,/Users/aakanni/Documents/Graphics/rayTracing/shaders);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		3937739ACB71477880BF24D4 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps",/Users/aakanni/Documents/Graphics/rayTracing/pngdecode,/Users/aakanni/Documents/Graphics/rayTracing/source/common,/Users/aakanni/Documents/Graphics/rayTracing/shaders,"/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include");
+				INFOPLIST_FILE = /Users/aakanni/Documents/Graphics/rayTracing/BUILD/CMakeFiles/raytracer.dir/Info.plist;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/aakanni/Documents/Graphics/rayTracing/BUILD/glfw-3.2/src/RelWithDebInfo/libglfw3.a /Users/aakanni/Documents/Graphics/rayTracing/BUILD/RelWithDebInfo/libglad.a /Users/aakanni/Documents/Graphics/rayTracing/BUILD/pngdecode/RelWithDebInfo/libpngdecode.a /Users/aakanni/Documents/Graphics/rayTracing/BUILD/RelWithDebInfo/libglad.a /Users/aakanni/Documents/Graphics/rayTracing/BUILD/glfw-3.2/src/RelWithDebInfo/libglfw3.a -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = raytracer;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		461E06794A48473CA1921DBB /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps","/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = pngdecode;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD/pngdecode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		4F9EC192220A4D30962637F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps",/Users/aakanni/Documents/Graphics/rayTracing/pngdecode,/Users/aakanni/Documents/Graphics/rayTracing/source/common,/Users/aakanni/Documents/Graphics/rayTracing/shaders,"/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include");
+				INFOPLIST_FILE = /Users/aakanni/Documents/Graphics/rayTracing/BUILD/CMakeFiles/raytracer.dir/Info.plist;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/aakanni/Documents/Graphics/rayTracing/BUILD/glfw-3.2/src/Debug/libglfw3.a /Users/aakanni/Documents/Graphics/rayTracing/BUILD/Debug/libglad.a /Users/aakanni/Documents/Graphics/rayTracing/BUILD/pngdecode/Debug/libpngdecode.a /Users/aakanni/Documents/Graphics/rayTracing/BUILD/Debug/libglad.a /Users/aakanni/Documents/Graphics/rayTracing/BUILD/glfw-3.2/src/Debug/libglfw3.a -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = raytracer;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		5424C6ACE3B249309BF49CB4 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps",/Users/aakanni/Documents/Graphics/rayTracing/pngdecode,/Users/aakanni/Documents/Graphics/rayTracing/source/common,/Users/aakanni/Documents/Graphics/rayTracing/shaders);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		5444B7BCB8494ABBAF3F88E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps",/Users/aakanni/Documents/Graphics/rayTracing/pngdecode,/Users/aakanni/Documents/Graphics/rayTracing/source/common,/Users/aakanni/Documents/Graphics/rayTracing/shaders);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		669B7B1720934ABEA8A772F1 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps",/Users/aakanni/Documents/Graphics/rayTracing/pngdecode,/Users/aakanni/Documents/Graphics/rayTracing/source/common,/Users/aakanni/Documents/Graphics/rayTracing/shaders,"/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glad;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		6EA479421C9946C7A541EFFC /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD/build;
+			};
+			name = MinSizeRel;
+		};
+		722B531D6DE54AE1BDAF093F /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps",/Users/aakanni/Documents/Graphics/rayTracing/pngdecode,/Users/aakanni/Documents/Graphics/rayTracing/source/common,/Users/aakanni/Documents/Graphics/rayTracing/shaders);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		7AC15EAB74144E7486335278 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps",/Users/aakanni/Documents/Graphics/rayTracing/pngdecode,/Users/aakanni/Documents/Graphics/rayTracing/source/common,/Users/aakanni/Documents/Graphics/rayTracing/shaders);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		828FAA1BACE54994A7B6D2A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps",/Users/aakanni/Documents/Graphics/rayTracing/pngdecode,/Users/aakanni/Documents/Graphics/rayTracing/source/common,/Users/aakanni/Documents/Graphics/rayTracing/shaders);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		8BDC37E9E8C04DB28CCC3104 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD/build;
+			};
+			name = RelWithDebInfo;
+		};
+		9056BEDA5E974ECEABE2D5F9 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps",/Users/aakanni/Documents/Graphics/rayTracing/pngdecode,/Users/aakanni/Documents/Graphics/rayTracing/source/common,/Users/aakanni/Documents/Graphics/rayTracing/shaders,"/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include");
+				INFOPLIST_FILE = /Users/aakanni/Documents/Graphics/rayTracing/BUILD/CMakeFiles/raytracer.dir/Info.plist;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/aakanni/Documents/Graphics/rayTracing/BUILD/glfw-3.2/src/MinSizeRel/libglfw3.a /Users/aakanni/Documents/Graphics/rayTracing/BUILD/MinSizeRel/libglad.a /Users/aakanni/Documents/Graphics/rayTracing/BUILD/pngdecode/MinSizeRel/libpngdecode.a /Users/aakanni/Documents/Graphics/rayTracing/BUILD/MinSizeRel/libglad.a /Users/aakanni/Documents/Graphics/rayTracing/BUILD/glfw-3.2/src/MinSizeRel/libglfw3.a -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = raytracer;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		AC155113651440B88FCE71C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps",/Users/aakanni/Documents/Graphics/rayTracing/pngdecode,/Users/aakanni/Documents/Graphics/rayTracing/source/common,/Users/aakanni/Documents/Graphics/rayTracing/shaders,"/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glad;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		D38FEDA6CB0F4160BE4DB943 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include","/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src","/Users/aakanni/Documents/Graphics/rayTracing/BUILD/glfw-3.2/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG -fPIC -Wall  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/aakanni/Documents/Graphics/rayTracing/BUILD/glfw-3.2/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		D444723FDE9244F38E217551 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps","/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = pngdecode;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD/pngdecode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		DBA3246C187F48C7AFBE0D5E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include","/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src","/Users/aakanni/Documents/Graphics/rayTracing/BUILD/glfw-3.2/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -fPIC -Wall  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/aakanni/Documents/Graphics/rayTracing/BUILD/glfw-3.2/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		EEA7E692498A42EBB14D5C3A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps",/Users/aakanni/Documents/Graphics/rayTracing/pngdecode,/Users/aakanni/Documents/Graphics/rayTracing/source/common,/Users/aakanni/Documents/Graphics/rayTracing/shaders);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		F2E671E8A0A54AE684AF302C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD/build;
+			};
+			name = Debug;
+		};
+		F4CDE1848DFB4FC89D074657 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps","/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = pngdecode;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD/pngdecode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		F6E4759738AA40EBA5E77F18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/deps",/Users/aakanni/Documents/Graphics/rayTracing/pngdecode,/Users/aakanni/Documents/Graphics/rayTracing/source/common,/Users/aakanni/Documents/Graphics/rayTracing/shaders);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aakanni/Documents/Graphics/rayTracing/BUILD;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		FF030BDA3FF04016805B8594 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/include","/Users/aakanni/Documents/Graphics/rayTracing/glfw-3.2/src","/Users/aakanni/Documents/Graphics/rayTracing/BUILD/glfw-3.2/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "   -fPIC -Wall  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/aakanni/Documents/Graphics/rayTracing/BUILD/glfw-3.2/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		115A8331B0274E6D9C437919 /* Build configuration list for PBXNativeTarget "raytracer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F9EC192220A4D30962637F1 /* Debug */,
+				2AEF321A2DB3472BB55B3921 /* Release */,
+				9056BEDA5E974ECEABE2D5F9 /* MinSizeRel */,
+				3937739ACB71477880BF24D4 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		15414F8145FC4CE59742C771 /* Build configuration list for PBXNativeTarget "glfw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF030BDA3FF04016805B8594 /* Debug */,
+				0B0C5E5ACCE84109A57637AF /* Release */,
+				DBA3246C187F48C7AFBE0D5E /* MinSizeRel */,
+				D38FEDA6CB0F4160BE4DB943 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		715A3F39AA9A43909FB3A84F /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AC15EAB74144E7486335278 /* Debug */,
+				828FAA1BACE54994A7B6D2A6 /* Release */,
+				2BBD95336A824A8D814746FC /* MinSizeRel */,
+				5424C6ACE3B249309BF49CB4 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9383911180E54D02BB7ABE79 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5444B7BCB8494ABBAF3F88E7 /* Debug */,
+				F6E4759738AA40EBA5E77F18 /* Release */,
+				722B531D6DE54AE1BDAF093F /* MinSizeRel */,
+				EEA7E692498A42EBB14D5C3A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AE95A216B9C44054A730E1BD /* Build configuration list for PBXNativeTarget "glad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC155113651440B88FCE71C5 /* Debug */,
+				0F7447FF7BF14169AA3D9AFF /* Release */,
+				1AFEBCB2609A499F85E8F345 /* MinSizeRel */,
+				669B7B1720934ABEA8A772F1 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F7E9C5676A4E47C1920BA324 /* Build configuration list for PBXProject "RAYTRACER" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2E671E8A0A54AE684AF302C /* Debug */,
+				1ABDC8B8D6F54E97A3CC101A /* Release */,
+				6EA479421C9946C7A541EFFC /* MinSizeRel */,
+				8BDC37E9E8C04DB28CCC3104 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FEDCA5AE6EDF4299BA6D597A /* Build configuration list for PBXNativeTarget "pngdecode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4CDE1848DFB4FC89D074657 /* Debug */,
+				D444723FDE9244F38E217551 /* Release */,
+				461E06794A48473CA1921DBB /* MinSizeRel */,
+				1824DE40A39648A48FECB34E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA86C3BA71F54E9AB78DC44D /* Project object */;
+}

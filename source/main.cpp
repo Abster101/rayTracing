@@ -16,7 +16,7 @@ typedef vec4  point4;
 
 //Scene variables
 enum{_SPHERE, _SQUARE, _BOX};
-int scene = _BOX; //Simple sphere, square or cornell box
+int scene = _SPHERE; //Simple sphere, square or cornell box
 std::vector < Object * > sceneObjects;
 point4 lightPosition;
 color4 lightColor;
@@ -222,12 +222,13 @@ bool shadowFeeler(vec4 p0, Object *object){
 /* ----------  return color, right now shading is approx based      --------- */
 /* ----------  depth                                                --------- */
 vec4 castRay(vec4 p0, vec4 E, Object *lastHitObject, int depth){
-  vec4 color = vec4(0.0,0.0,0.0,0.0);
+  vec4 color = vec4(0.0,1.0,1.0,1.0);
   
   if(depth > maxDepth){ return color; }
   
   //TODO: Raytracing code here
-  
+    // hint: Ray = p0 + t*dir;
+    
   return color;
   
 }
@@ -748,6 +749,8 @@ int main(void){
     
     switch(scene){
       case _SPHERE:
+            GLState::projection = Perspective( 45.0, aspect, 0.01, 100.0 );
+            break;
       case _SQUARE:
         GLState::projection = Perspective( 45.0, aspect, 0.01, 100.0 );
         break;

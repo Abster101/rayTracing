@@ -1,0 +1,8 @@
+/Users/aakanni/Documents/Graphics/rayTracing/BUILD/CMakeFiles/raytracer.dir
+/Users/aakanni/Documents/Graphics/rayTracing/BUILD/CMakeFiles/glad.dir
+/Users/aakanni/Documents/Graphics/rayTracing/BUILD/CMakeFiles/ALL_BUILD.dir
+/Users/aakanni/Documents/Graphics/rayTracing/BUILD/CMakeFiles/ZERO_CHECK.dir
+/Users/aakanni/Documents/Graphics/rayTracing/BUILD/glfw-3.2/CMakeFiles/ALL_BUILD.dir
+/Users/aakanni/Documents/Graphics/rayTracing/BUILD/glfw-3.2/CMakeFiles/ZERO_CHECK.dir
+/Users/aakanni/Documents/Graphics/rayTracing/BUILD/glfw-3.2/src/CMakeFiles/glfw.dir
+/Users/aakanni/Documents/Graphics/rayTracing/BUILD/pngdecode/CMakeFiles/pngdecode.dir
