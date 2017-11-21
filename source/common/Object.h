@@ -22,7 +22,7 @@ public:
   
   typedef struct{
     vec4 color;
-    vec4 Kd;
+    float Kd;
     float Ks;
     float Kn;
     float Kt;
