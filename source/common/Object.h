@@ -22,7 +22,8 @@ public:
   
   typedef struct{
     vec4 color;
-    vec4 Kd;
+    //vec4 Kd;
+      float Kd;
     float Ks;
     float Kn;
     float Kt;
@@ -80,12 +81,12 @@ class Sphere : public Object{
 public:
   
   Sphere(std::string name) : Object(name) { mesh.makeSubdivisionSphere(8); };
+    
   
   virtual IntersectionValues intersect(vec4 p0_w, vec4 V_w);
   
 private:
   double raySphereIntersection(vec4 p0, vec4 V, vec4 O=vec4(0.0, 0.0, 0.0, 1.0), double r=1.0);
-  
 };
 
 class Square : public Object{

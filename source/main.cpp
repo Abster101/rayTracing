@@ -222,11 +222,20 @@ bool shadowFeeler(vec4 p0, Object *object){
 /* ----------  return color, right now shading is approx based      --------- */
 /* ----------  depth                                                --------- */
 vec4 castRay(vec4 p0, vec4 E, Object *lastHitObject, int depth){
-  vec4 color = vec4(0.0,1.0,1.0,1.0);
+  vec4 color = vec4(0.0,0.0,0.0,0.0);
   
-  if(depth > maxDepth){ return color; }
-  
-  //TODO: Raytracing code here
+ // if(depth > maxDepth){ return color; }
+    
+    Object::IntersectionValues values= sceneObjects[0]->intersect(p0, E);
+    std::vector<Object:: IntersectionValues> results (sceneObjects.size());
+    for(unsigned int i=0; i <sceneObjects.size();i++){
+        results[i]= sceneObjects[i] -> intersect(p0, E);
+    }
+    std::sort(results.begin(),results.end(),intersectionSort);
+    if(values.t_w != std::numeric_limits<double>::infinity() ){
+        color = sceneObjects[0]->shadingValues.color;
+    }
+  //TODO: Raytracing code here  include for loop
     // hint: Ray = p0 + t*dir;
     
   return color;
@@ -401,7 +410,7 @@ void initUnitSphere(){
   {
   sceneObjects.push_back(new Sphere("Diffuse sphere"));
   Object::ShadingValues _shadingValues;
-  _shadingValues.color = vec4(1.0,1.0,1.0,1.0);
+  _shadingValues.color = vec4(1.0,1.0,0.0,1.0);
   _shadingValues.Ka = 0.0;
   _shadingValues.Kd = 1.0;
   _shadingValues.Ks = 0.0;
@@ -409,8 +418,21 @@ void initUnitSphere(){
   _shadingValues.Kt = 0.0;
   _shadingValues.Kr = 0.0;
   sceneObjects[sceneObjects.size()-1]->setShadingValues(_shadingValues);
-  sceneObjects[sceneObjects.size()-1]->setModelView(mat4());
+  sceneObjects[sceneObjects.size()-1]->setModelView(Translate(1.0, 0.0, 0.0));
   }
+{
+  sceneObjects.push_back(new Sphere("Diffuse sphere 2"));
+  Object::ShadingValues _shadingValues;
+  _shadingValues.color = vec4(1.0,0.0,0.0,1.0);
+  _shadingValues.Ka = 0.0;
+  _shadingValues.Kd = 1.0;
+  _shadingValues.Ks = 0.0;
+  _shadingValues.Kn = 16.0;
+  _shadingValues.Kt = 0.0;
+  _shadingValues.Kr = 0.0;
+  sceneObjects[sceneObjects.size()-1]->setShadingValues(_shadingValues);
+  sceneObjects[sceneObjects.size()-1]->setModelView(Translate(-1.0, 0.0, 0.0));
+}
   
 }
 
