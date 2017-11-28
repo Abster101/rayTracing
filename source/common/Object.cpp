@@ -15,8 +15,9 @@ Object::IntersectionValues Sphere::intersect(vec4 p0_w, vec4 V_w){
     
     vec4 p0_o =INVC*p0_w;
     vec4 v_o = normalize(INVCStar*V_w);
+    
     result.t_o = raySphereIntersection(p0_o, v_o);
-    result.t_w = length(INVC*V_w);
+    result.t_w = result.t_o/length(v_o);
     
     //result.t_w = result.t_o/sqrt(dot(INVC*V_w,INVC*V_w)); replaced by length
   //TODO: Ray-sphere setup into object space and then return it back
@@ -27,7 +28,7 @@ Object::IntersectionValues Sphere::intersect(vec4 p0_w, vec4 V_w){
 /* ------ Ray = p0 + t*V  sphere at origin O and radius r    : Find t ------- */
 double Sphere::raySphereIntersection(vec4 p0, vec4 V, vec4 O, double r){
 //  double t   = std::numeric_limits< double >::infinity();
-    double a=1;
+    double a=1.0;
     double b = dot(2.0*V,p0-O);
     double c= length(p0-O)*length(p0-O)-r*r;
     double in_sqrt= b*b - 4.0*a*c;
@@ -35,8 +36,8 @@ double Sphere::raySphereIntersection(vec4 p0, vec4 V, vec4 O, double r){
     if(in_sqrt < 0.0){
     return  std::numeric_limits< double >::infinity();
     }
-    double t_plus = (-b + sqrt(in_sqrt))/2*a;
-    double t_minus = (-b - sqrt(in_sqrt))/2*a;
+    double t_plus = (-b + sqrt(in_sqrt))/2.0*a;
+    double t_minus = (-b - sqrt(in_sqrt))/2.0*a;
     
     if (t_plus < EPSILON){t_plus=std::numeric_limits<double>::infinity();}
     if (t_plus < EPSILON){t_plus=std::numeric_limits<double>::infinity();}
@@ -48,16 +49,38 @@ double Sphere::raySphereIntersection(vec4 p0, vec4 V, vec4 O, double r){
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 Object::IntersectionValues Square::intersect(vec4 p0_w, vec4 V_w){
-  IntersectionValues result;
-  //TODO: Ray-square setup
-  
-  return result;
+    IntersectionValues result;
+    
+    
+    vec4 p0_o =INVC*p0_w;
+    vec4 v_o = normalize(INVCStar*V_w);
+    
+    result.t_o = raySquareIntersection(p0_o, v_o);
+    result.t_w = result.t_o/length(v_o);
+    //result.t_w = result.t_o/sqrt(dot(INVC*V_w,INVC*V_w)); replaced by length
+    //TODO: Ray-sphere setup into object space and then return it back
+    return result;
 }
 
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 double Square::raySquareIntersection(vec4 p0, vec4 V){
-  double t   = std::numeric_limits< double >::infinity();
-  //TODO: Ray-square intersection;
-  return t;
-}
+ // double t   = std::numeric_limits< double >::infinity();
+    vec4 O = (0.5,0.0,0.0,1.0);
+    double r=1.0;
+    double a=1;
+    double b = dot(2.0*V,p0-O);
+    double c= length(p0-O)*length(p0-O)-r*r;
+    double in_sqrt= b*b - 4.0*a*c;
+    
+    if(in_sqrt < 0.0){
+        return  std::numeric_limits< double >::infinity();
+    }
+    double t_plus = (-b + sqrt(in_sqrt))/2*a;
+    double t_minus = (-b - sqrt(in_sqrt))/2*a;
+    
+    if (t_plus < EPSILON){t_plus=std::numeric_limits<double>::infinity();}
+    if (t_plus < EPSILON){t_plus=std::numeric_limits<double>::infinity();}
+    
+    //TODO: Ray-sphere intersection;
+    return fmin(t_plus,t_minus);}

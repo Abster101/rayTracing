@@ -226,13 +226,13 @@ vec4 castRay(vec4 p0, vec4 E, Object *lastHitObject, int depth){
   
  // if(depth > maxDepth){ return color; }
     
-    Object::IntersectionValues values= sceneObjects[0]->intersect(p0, E);
+    //Object::IntersectionValues values= sceneObjects[0]->intersect(p0, E);
     std::vector<Object:: IntersectionValues> results (sceneObjects.size());
     for(unsigned int i=0; i <sceneObjects.size();i++){
         results[i]= sceneObjects[i] -> intersect(p0, E);
     }
     std::sort(results.begin(),results.end(),intersectionSort);
-    if(values.t_w != std::numeric_limits<double>::infinity() ){
+    if(results[0].t_w != std::numeric_limits<double>::infinity() ){
         color = sceneObjects[0]->shadingValues.color;
     }
   //TODO: Raytracing code here  include for loop
@@ -410,7 +410,7 @@ void initUnitSphere(){
   {
   sceneObjects.push_back(new Sphere("Diffuse sphere"));
   Object::ShadingValues _shadingValues;
-  _shadingValues.color = vec4(1.0,1.0,0.0,1.0);
+  _shadingValues.color = vec4(1.0,0.0,0.0,1.0);
   _shadingValues.Ka = 0.0;
   _shadingValues.Kd = 1.0;
   _shadingValues.Ks = 0.0;
@@ -423,7 +423,7 @@ void initUnitSphere(){
 {
   sceneObjects.push_back(new Sphere("Diffuse sphere 2"));
   Object::ShadingValues _shadingValues;
-  _shadingValues.color = vec4(1.0,0.0,0.0,1.0);
+  _shadingValues.color = vec4(0.0,0.0,1.0,1.0);
   _shadingValues.Ka = 0.0;
   _shadingValues.Kd = 1.0;
   _shadingValues.Ks = 0.0;
@@ -709,7 +709,7 @@ int main(void){
   
   glfwWindowHint(GLFW_SAMPLES, 4);
   
-  window = glfwCreateWindow(768, 768, "Raytracer", NULL, NULL);
+  window = glfwCreateWindow(256, 256, "Raytracer", NULL, NULL);
   if (!window){
     glfwTerminate();
     exit(EXIT_FAILURE);
