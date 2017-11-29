@@ -16,7 +16,7 @@ typedef vec4  point4;
 
 //Scene variables
 enum{_SPHERE, _SQUARE, _BOX};
-int scene = _SPHERE; //Simple sphere, square or cornell box
+int scene = _SQUARE; //Simple sphere, square or cornell box
 std::vector < Object * > sceneObjects;
 point4 lightPosition;
 color4 lightColor;
@@ -230,13 +230,11 @@ vec4 castRay(vec4 p0, vec4 E, Object *lastHitObject, int depth){
     std::vector<Object:: IntersectionValues> results (sceneObjects.size());
     for(unsigned int i=0; i <sceneObjects.size();i++){
         results[i]= sceneObjects[i] -> intersect(p0, E);
+        if(results[i].t_w != std::numeric_limits<double>::infinity() ){
+            color = sceneObjects[i]->shadingValues.color;
+        }
     }
     std::sort(results.begin(),results.end(),intersectionSort);
-    if(results[0].t_w != std::numeric_limits<double>::infinity() ){
-        color = sceneObjects[0]->shadingValues.color;
-    }
-  //TODO: Raytracing code here  include for loop
-    // hint: Ray = p0 + t*dir;
     
   return color;
   
@@ -418,7 +416,7 @@ void initUnitSphere(){
   _shadingValues.Kt = 0.0;
   _shadingValues.Kr = 0.0;
   sceneObjects[sceneObjects.size()-1]->setShadingValues(_shadingValues);
-  sceneObjects[sceneObjects.size()-1]->setModelView(Translate(1.0, 0.0, 0.0));
+  sceneObjects[sceneObjects.size()-1]->setModelView(RotateY(45)*Translate(1.0, 0.0, 0.0));
   }
 {
   sceneObjects.push_back(new Sphere("Diffuse sphere 2"));
@@ -431,7 +429,7 @@ void initUnitSphere(){
   _shadingValues.Kt = 0.0;
   _shadingValues.Kr = 0.0;
   sceneObjects[sceneObjects.size()-1]->setShadingValues(_shadingValues);
-  sceneObjects[sceneObjects.size()-1]->setModelView(Translate(-1.0, 0.0, 0.0));
+  sceneObjects[sceneObjects.size()-1]->setModelView(RotateY(45)*Translate(-1.0, 0.0, 0.0));
 }
   
 }
@@ -448,7 +446,7 @@ void initUnitSquare(){
   { //Back Wall
     sceneObjects.push_back(new Square("Unit Square"));
     Object::ShadingValues _shadingValues;
-    _shadingValues.color = vec4(1.0,1.0,1.0,1.0);
+    _shadingValues.color = vec4(1.0,0.0,0.0,1.0);
     _shadingValues.Ka = 0.0;
     _shadingValues.Kd = 1.0;
     _shadingValues.Ks = 0.0;
