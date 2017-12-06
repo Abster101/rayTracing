@@ -49,37 +49,35 @@ double Sphere::raySphereIntersection(vec4 p0, vec4 V, vec4 O, double r){
 /* -------------------------------------------------------------------------- */
 Object::IntersectionValues Square::intersect(vec4 p0_w, vec4 V_w){
     IntersectionValues result;
+
     
-    vec4 p0_o =C*p0_w;
-    vec4 v_o = TRANINVC*V_w;
-    v_o= vec4 (v_o.x, v_o.y, v_o.z, 0);
-    v_o = normalize(v_o);
+    vec4 p0_o =INVC*p0_w;
+    vec4 v_o = normalize(INVCStar*V_w);
+    
     result.t_o = raySquareIntersection(p0_o, v_o);
     result.t_w = result.t_o/length(v_o);
     
     //result.t_w = result.t_o/sqrt(dot(INVC*V_w,INVC*V_w)); replaced by length
     //TODO: Ray-sphere setup into object space and then return it back
-    return result;
-}
+    return result;}
 
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
-double Square::raySquareIntersection(vec4 p0, vec4 V){
- // double t   = std::numeric_limits< double >::infinity();
-    double r=1.0;
-    double a=1;
-    double b = dot(2.0*V,p0);
-    double c= length(p0)*length(p0)-r*r;
-    double in_sqrt= b*b - 4.0*a*c;
+double Square::raySquareIntersection(vec4 p0, vec4 V){ 
     
-    if(in_sqrt < 0.0){
+    vec4 surface= vec4(0,0,0,1);
+    vec4 norm= vec4(0,0,1,0);
+    double check=dot(norm, V);
+   
+    
+    if(check == 0.0){
         return  std::numeric_limits< double >::infinity();
     }
-    double t_plus = (-b + sqrt(in_sqrt))/2*a;
-    double t_minus = (-b - sqrt(in_sqrt))/2*a;
-    
-    if (t_plus < EPSILON){t_plus=std::numeric_limits<double>::infinity();}
-    if (t_plus < EPSILON){t_plus=std::numeric_limits<double>::infinity();}
-    
-    //TODO: Ray-sphere intersection;
-    return fmin(t_plus,t_minus);}
+    else{
+        double t = dot(norm,(surface-p0))/check;
+        vec4 checkpoint = p0+t*V;
+        if (t < EPSILON){ return std::numeric_limits<double>::infinity();}
+        if (checkpoint.x > -1 && checkpoint.x< 1 && checkpoint.y >-1 &&checkpoint.y <1){ return t;}
+    }
+    return  std::numeric_limits< double >::infinity();
+}
