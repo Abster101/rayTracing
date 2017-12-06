@@ -51,8 +51,9 @@ Object::IntersectionValues Square::intersect(vec4 p0_w, vec4 V_w){
     IntersectionValues result;
     
     vec4 p0_o =C*p0_w;
-    vec4 v_o = normalize(TRANINVC*V_w);
-    
+    vec4 v_o = TRANINVC*V_w;
+    v_o= vec4 (v_o.x, v_o.y, v_o.z, 0);
+    v_o = normalize(v_o);
     result.t_o = raySquareIntersection(p0_o, v_o);
     result.t_w = result.t_o/length(v_o);
     
@@ -65,11 +66,10 @@ Object::IntersectionValues Square::intersect(vec4 p0_w, vec4 V_w){
 /* -------------------------------------------------------------------------- */
 double Square::raySquareIntersection(vec4 p0, vec4 V){
  // double t   = std::numeric_limits< double >::infinity();
-    vec4 O = (0.0,0.0,0.0,1.0);
     double r=1.0;
     double a=1;
-    double b = dot(2.0*V,p0-O);
-    double c= length(p0-O)*length(p0-O)-r*r;
+    double b = dot(2.0*V,p0);
+    double c= length(p0)*length(p0)-r*r;
     double in_sqrt= b*b - 4.0*a*c;
     
     if(in_sqrt < 0.0){

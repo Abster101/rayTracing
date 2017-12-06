@@ -16,7 +16,7 @@ typedef vec4  point4;
 
 //Scene variables
 enum{_SPHERE, _SQUARE, _BOX};
-int scene = _SQUARE; //Simple sphere, square or cornell box
+int scene = _BOX; //Simple sphere, square or cornell box
 std::vector < Object * > sceneObjects;
 point4 lightPosition;
 color4 lightColor;
@@ -210,10 +210,13 @@ void castRayDebug(vec4 p0, vec4 dir){
 
 /* -------------------------------------------------------------------------- */
 bool shadowFeeler(vec4 p0, Object *object){
-  bool inShadow = false;
-  
-  //TODO: Shadow code here
-  
+    bool inShadow = false;
+
+    if(inShadow != false){
+        //phong= shading
+       // lightColor+= pow(Kd * C[j] * dot(N , L[i]),Kn[j]);
+    }
+    //else black
   return inShadow;
 }
 
