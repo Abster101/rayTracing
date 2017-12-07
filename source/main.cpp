@@ -212,11 +212,16 @@ void castRayDebug(vec4 p0, vec4 dir){
 bool shadowFeeler(vec4 p0, Object *object){
     bool inShadow = false;
 
-    if(inShadow != false){
+    for(unsigned int i=0; i <sceneObjects.size();i++){
+        if(inShadow== false){
         //phong= shading
-       // lightColor+= pow(Kd * C[j] * dot(N , L[i]),Kn[j]);
+        // lightColor+= pow(Kd * C[j] * dot(N , L[i]),Kn[j]);
+        
+        }else{
+        //else black
+        vec4 color = vec4(0.0,0.0,0.0,0.0);
+        }
     }
-    //else black
   return inShadow;
 }
 
@@ -225,8 +230,10 @@ bool shadowFeeler(vec4 p0, Object *object){
 /* ----------  return color, right now shading is approx based      --------- */
 /* ----------  depth                                                --------- */
 vec4 castRay(vec4 p0, vec4 E, Object *lastHitObject, int depth){
-  vec4 color = vec4(0.0,0.0,0.0,0.0);
- 
+    vec4 N_o= normalize((p0 - vec4(0.0,0.0,0.0,0.0)));
+    
+
+    vec4 color = vec4(0.0,0.0,0.0,0.0);
     std::vector<Object:: IntersectionValues> results (sceneObjects.size());
     for(unsigned int i=0; i <sceneObjects.size();i++){
         results[i]= sceneObjects[i] -> intersect(p0, E);
@@ -236,6 +243,18 @@ vec4 castRay(vec4 p0, vec4 E, Object *lastHitObject, int depth){
     }
     std::sort(results.begin(),results.end(),intersectionSort);
     
+    
+    mat4 modelView = identity();
+    glUniform4fv( glGetUniformLocation(GLState::program, "ModelView "), 1, modelView );
+    
+    glUniform4fv( glGetUniformLocation(GLState::program, "projectionView "), 1, GLState::projection );
+    glUniform4fv( glGetUniformLocation(GLState::program, "Model View Light "), 1,  GLState::sceneModelView);
+    mat4 m_inv_transp = transpose(invert(modelView));
+    glUniform4fv( glGetUniformLocation(GLState::program, "M inverse transpose"), 1,  GLState::sceneModelView);
+    
+    mat4 v_inv = invert(modelView);
+    glUniform4fv( glGetUniformLocation(GLState::program, "M inverse "), 1,  GLState::sceneModelView);
+
   return color;
   
 }
