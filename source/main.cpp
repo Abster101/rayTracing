@@ -211,18 +211,18 @@ void castRayDebug(vec4 p0, vec4 dir){
 /* -------------------------------------------------------------------------- */
 bool shadowFeeler(vec4 p0, Object *object){
     bool inShadow = false;
+    vec4 L= lightPosition - p0;
+    double distance = length(L);
+    L = normalize(L);
 
-    for(unsigned int i=0; i <sceneObjects.size();i++){
-        if(inShadow== false){
-        //phong= shading
-        // lightColor+= pow(Kd * C[j] * dot(N , L[i]),Kn[j]);
-        
-        }else{
-        //else black
-        vec4 color = vec4(0.0,0.0,0.0,0.0);
+
+    for(int i=0; i <sceneObjects.size();i++){
+        Object::IntersectionValues temp = (sceneObjects[i]->intersect(p0, L));
+        if(temp.t_w != std::numeric_limits<double>::infinity() && temp.t_w<distance){
+                inShadow = true;
         }
     }
-  return inShadow;
+    return inShadow;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -230,31 +230,103 @@ bool shadowFeeler(vec4 p0, Object *object){
 /* ----------  return color, right now shading is approx based      --------- */
 /* ----------  depth                                                --------- */
 vec4 castRay(vec4 p0, vec4 E, Object *lastHitObject, int depth){
-    vec4 N_o= normalize((p0 - vec4(0.0,0.0,0.0,0.0)));
-    
+    vec4 color = vec4(0.0,0.0,0.0,1.0);
 
-    vec4 color = vec4(0.0,0.0,0.0,0.0);
     std::vector<Object:: IntersectionValues> results (sceneObjects.size());
     for(unsigned int i=0; i <sceneObjects.size();i++){
         results[i]= sceneObjects[i] -> intersect(p0, E);
-        if(results[i].t_w != std::numeric_limits<double>::infinity() ){
-            color = sceneObjects[i]->shadingValues.color;
-        }
+        results[i].ID_=i;
+//        if(results[0].t_w != std::numeric_limits<double>::infinity() ){
+//            color = sceneObjects[0]->shadingValues.color;
+//        }
     }
     std::sort(results.begin(),results.end(),intersectionSort);
+    if(results[0].t_w != std::numeric_limits<double>::infinity() ){
+        int id=results[0].ID_;
+        
+        color4 material_ambient(sceneObjects[id]->shadingValues.Ka*sceneObjects[id]->shadingValues.color);
+        color4 material_diffuse(sceneObjects[id]->shadingValues.color);
+        color4 material_specular(sceneObjects[id]->shadingValues.Ks);
+        float material_Shininess= sceneObjects[id]->shadingValues.Kn;
+        
+        color4  Ambient_Product =lightColor *material_ambient;
+        Ambient_Product.w=1.0;
+        color4 Diffuse_Product =lightColor *material_diffuse;
+        Diffuse_Product.w=1.0;
+        color4 Specular_Product =lightColor *material_specular;
+        Specular_Product.w=1.0;
+        
+        vec4 L = normalize(lightPosition - results[0].P_w);
+        L.w=0.0;
+        vec4 N= normalize(results[0].N_w);
+        vec4 R= normalize(reflect(L,results[0].N_w));
+        vec4 V=normalize(E);
+        float Kd = fmax( dot(L, N), 0.0 );
+        float Ks = pow( fmax(dot(V,R), 0.0), material_Shininess );
+        
+        vec4 ambient= Ambient_Product;
+        vec4 diffuse= Kd * Diffuse_Product;
+        vec4 specular = Ks * Specular_Product;
+        color= ambient+diffuse+specular;
+        //checks for shadow
+        if(shadowFeeler(results[0].P_w, sceneObjects[results[0].ID_]) || (dot(L,results[0].N_w)) <0){
+            color = vec4(0.0,0.0,0.0,1.0);
+        }
+        //INIT used variables
+        vec4 R_feeler;
+        vec4 color2;
+        float n1 = 0.0;
+        float n2 = 0.0;
+        float n3 = n1/n2;
+        double c= 0.0;
+        double in_sqrt = 0.0;
+        
+        //checks for glass
+        if (sceneObjects[results[0].ID_] -> shadingValues.Ks>0){
+            R_feeler= results[0].N_w- 2*(results[0].N_w*(pow(fmax(dot(E, results[0].N_w),0.0), sceneObjects[results[0].ID_]->shadingValues.Kn)));
+            R_feeler.w=0.0;
+            R_feeler=normalize(R_feeler);
+            if (lastHitObject == NULL){
+                color2= color + castRay(results[0].P_w, R_feeler, sceneObjects[results[0].ID_], depth+1);
+                color2 *= sceneObjects[results[0].ID_]->shadingValues.Ks;
+            }else{
+                color2= color + (castRay(results[0].P_w, R_feeler, NULL, depth +1));
+            }
+            color += color2;
+        }
+        //checks for refelection
+        if (sceneObjects[results[0].ID_] -> shadingValues.Kt>0){
+            if (lastHitObject == NULL){
+                n1=1.0;
+                n2= sceneObjects[results[0].ID_]->shadingValues.Kr;
+            }else{
+                n1= sceneObjects[results[0].ID_]->shadingValues.Kr;
+                n2= 1.0;
+                results[0].N_w =-results[0].N_w;
+            }
+            c= -dot(results[0].N_w, E);
+            in_sqrt = 1- (n3*n3)*(1-(c*c));
+            vec4 r= reflect(E, results[0].N_w);
+            
+            if(in_sqrt < 0){
+                vec4 color2= castRay(results[0].P_w, r, sceneObjects[results[0].ID_], depth+1);
+                color2 *= sceneObjects[results[0].ID_]->shadingValues.Kt;
+                color += color2;
+            }else{
+                vec4 refractray= n3*E + (n3*c -sqrt(in_sqrt))*results[0].N_w;
+                refractray = normalize(refractray);
+                vec4 color2= castRay(results[0].P_w, refractray, sceneObjects[results[0].ID_], depth+1);
+                color2 = color2 * sceneObjects[results[0].ID_]->shadingValues.Kt;
+                color+=color2;
+            }
+        }
+}
     
-    
-    mat4 modelView = identity();
-    glUniform4fv( glGetUniformLocation(GLState::program, "ModelView "), 1, modelView );
-    
-    glUniform4fv( glGetUniformLocation(GLState::program, "projectionView "), 1, GLState::projection );
-    glUniform4fv( glGetUniformLocation(GLState::program, "Model View Light "), 1,  GLState::sceneModelView);
-    mat4 m_inv_transp = transpose(invert(modelView));
-    glUniform4fv( glGetUniformLocation(GLState::program, "M inverse transpose"), 1,  GLState::sceneModelView);
-    
-    mat4 v_inv = invert(modelView);
-    glUniform4fv( glGetUniformLocation(GLState::program, "M inverse "), 1,  GLState::sceneModelView);
+    if(color.x > 1.0){ color.x = 1.0; }
+    if(color.y > 1.0){ color.y = 1.0; }
+    if(color.z > 1.0){ color.z = 1.0; }
 
+    color.w =1.0;
   return color;
   
 }
